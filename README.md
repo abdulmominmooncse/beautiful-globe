@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌕 Interactive 3D Moon Simulation
 
-## Getting Started
+A **Next.js** + **Three.js** project that simulates a 3D rotating Moon 🌑 with interactive mouse dragging and zooming.  
+Randomly generated craters make the Moon feel even more realistic!
 
-First, run the development server:
+
+## ✨ Features
+
+- 🎯 Smooth auto-rotation of the Moon
+- 🖱️ Drag with mouse to rotate manually
+- 🔍 Scroll wheel to zoom in and out
+- 🪨 Randomly generated Moon craters
+- 🌌 Realistic ambient and directional lighting
+- 🏗️ Built with `three.js`, `@react-three/fiber`, and **Next.js 14 App Router**
+- 🔥 Responsive and optimized for any screen size
+
+
+## 🛠️ Tech Stack
+
+- **Next.js 14**
+- **React 18**
+- **TypeScript**
+- **three.js** (core 3D rendering)
+- **OrbitControls** from `three/examples/jsm/controls/OrbitControls`
+
+
+
+## 📚 How It Works
+
+- A **Three.js scene** is initialized inside a custom `<canvas>`.
+- A **Moon sphere** (`THREE.SphereGeometry`) is created with a `MeshPhongMaterial`.
+- **50 random craters** are generated and positioned across the surface using spherical coordinates.
+- **OrbitControls** allow damping for smooth movement.
+- Mouse events:
+  - **Mouse drag** rotates the Moon manually.
+  - **Scroll wheel** zooms the camera in and out.
+- **Responsive resizing** adjusts camera and renderer size on window resize.
+
+
+## 🚀 Getting Started
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/moon-simulation.git
+
+# 2. Go to the project directory
+cd moon-simulation
+
+# 3. Install dependencies
+npm install
+# or
+yarn install
+
+# 4. Run the development server
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
